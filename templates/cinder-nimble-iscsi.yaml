@@ -1,2 +1,35 @@
-todo: cert team to update this file
+parameter_defaults:
+  Debug: True
+  CinderEnableIscsiBackend: false
+  GlanceBackend: cinder
+  ControllerExtraConfig:
+    cinder::config::cinder_config:
+        nimble/use_multipath_for_image_xfer:
+            value: True
+        nimble/volume_driver:
+            value: cinder.volume.drivers.nimble.NimbleISCSIDriver
+        nimble/nimble_subnet_label:
+            value: <Subnet lebel>
+        nimble/nimble_iscsi_ips:
+            value: <Discovery Address>
+        nimble/Nimble_pool_name:
+            value: default
+        nimble/san_ip:
+            value: <Array Management IP Address>
+        nimble/san_login:
+            value: admin
+        nimble/san_password:
+            value: <admin Password>
+        nimble/volume_backend_name:
+            value: nimble
+        nimble/num_volume_device_scan_tries:
+            value: 10
+        nimble/Image_volume_cache_enabled:
+            value: True
+        nimble/volume_clear:
+            value: zero
+        nimble/backend_host:
+            value: hostgroup
 
+    cinder_user_enabled_backends: ['nimble']
+    
