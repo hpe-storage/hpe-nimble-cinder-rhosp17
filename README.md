@@ -28,7 +28,7 @@ sudo openstack tripleo container image prepare \
 
 Edit the containers-prepare-parameter.yaml file.
 
-Sample file for iSCSI backend is available in [templates](https://github.com/hpe-storage/hpe-nimble-cinder-rhosp17/blob/master/templates) folder for reference.
+Sample file is available in [templates](https://github.com/hpe-storage/hpe-nimble-cinder-rhosp17/blob/master/templates) folder for reference.
 
 
 #### 1.2 Environment File for nimble backend
